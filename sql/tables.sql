@@ -21,4 +21,22 @@ CREATE TABLE otp
     otp      VARCHAR(6)   NOT NULL,
     reg_time DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
     mod_time DATETIME ON UPDATE CURRENT_TIMESTAMP
-)
+);
+
+CREATE TABLE vehicle
+(
+    vehicle_id     SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user           SMALLINT UNSIGNED NOT NULL REFERENCES user (user_id),
+    vehicle_number VARCHAR(16)       NOT NULL,
+    brand          VARCHAR(16),
+    model          VARCHAR(32),
+    type VARCHAR(32),
+    yom            SMALLINT UNSIGNED,
+    millage        MEDIUMINT UNSIGNED,
+    color          VARCHAR(16),
+    owner          VARCHAR(64),
+    absolute_owner VARCHAR(64),
+    reg_time       DATETIME          NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    mod_time       DATETIME ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE (vehicle_number, user)
+);
