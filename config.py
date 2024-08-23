@@ -1,7 +1,7 @@
 class Db:
-    host = "192.168.3.223"
+    host = "sgp2.devices.kavithigroup.com"
     user = "road_eye_admin"
-    password = "f3Gk7Vy8K2CPcAdD"
+    password = "xU8C4rgamwu5BQDcZFkpzAMK"
     database = "road_eye"
 
 

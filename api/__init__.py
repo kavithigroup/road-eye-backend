@@ -10,7 +10,11 @@ from starlette.responses import Response
 import mailing
 from db_connector import query, update
 
+from . import sample
+
 router = APIRouter(prefix="/api")
+
+router.include_router(sample.router)
 
 
 @router.get("/")
