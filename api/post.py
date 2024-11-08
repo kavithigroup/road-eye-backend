@@ -103,7 +103,7 @@ async def create_comment(post_id: int, request: Request):
         return "Error while creating comment"
     return "Comment created successfully"
 
-# Update comment (Modify existing comment)
+# Update comments on post
 @router.put("/comments/update")
 async def update_comment(request: Request):
     data: dict = await request.json()
