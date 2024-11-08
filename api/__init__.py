@@ -10,11 +10,17 @@ from starlette.responses import Response
 import mailing
 from db_connector import query, update
 
-from . import sample
+from . import sample, complain, inquiry, notification, post
 
 router = APIRouter(prefix="/api")
 
 router.include_router(sample.router)
+router.include_router(complain.router)
+router.include_router(inquiry.router)
+router.include_router(notification.router)
+router.include_router(post.router)
+
+
 
 
 @router.get("/")
@@ -96,3 +102,9 @@ async def vehicle_delete(request: Request):
     data: dict = await request.json()
     update("DELETE FROM vehicle WHERE vehicle_id = %s", (data["id"],))
     return "ok"
+
+@router.get("/all-vehicle")
+def allVehicles():
+    return query('SELECT * FROM vehicle')
+
+

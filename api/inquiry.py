@@ -5,6 +5,7 @@ from db_connector import query, update
 
 router = APIRouter(prefix="/inquiry")
 
+
 # Inquiries API List
 
 # Get all inquiries

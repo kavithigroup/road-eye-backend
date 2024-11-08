@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="road_eye@192.168.3.223" uuid="75b526ad-ba3b-4823-8acc-5ff4fa383266">
+    <data-source source="LOCAL" name="road_eye@sgp2.devices.kavithigroup.com" uuid="8e6fe0bd-31f4-46be-89e5-2c38060bbb71">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mariadb://192.168.3.223:3306/road_eye</jdbc-url>
+      <jdbc-url>jdbc:mariadb://sgp2.devices.kavithigroup.com/road_eye</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
